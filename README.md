@@ -13,7 +13,7 @@ B62 is a Go package for encoding and decoding data using Base62 encoding. Base62
 To install the package, use the following command:
 
 ```sh
-go get github.com/inovacc/b62
+go get github.com/inovacc/base62
 ```
 
 # Encode binary data to Base62 string
@@ -23,12 +23,12 @@ package main
 
 import (
     "fmt"
-    "github.com/inovacc/b62"
+    "github.com/inovacc/base62"
 )
 
 func main() {
     data := []byte("Hello, World!")
-    encoded := b62.Encode(data)
+    encoded := base62.Encode(data)
     fmt.Println("Encoded:", encoded)
 }
 ```
@@ -40,12 +40,12 @@ package main
 
 import (
     "fmt"
-    "github.com/inovacc/b62"
+    "github.com/inovacc/base62"
 )
 
 func main() {
     encoded := "Base62EncodedString"
-    decoded, err := b62.Decode(encoded)
+    decoded, err := base62.Decode(encoded)
     if err != nil {
         fmt.Println("Error decoding:", err)
         return
